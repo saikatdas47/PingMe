@@ -4,11 +4,16 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import bgImage from "./assets/img1.jpg"; // safer import
+import logo from "./assets/bg2.png"
+
+
+
+
 
 const App = () => {
   return (
     <div
-      className="min-h-screen w-screen bg-cover bg-center overflow-hidden"
+      className="bg-contain"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <Routes>
