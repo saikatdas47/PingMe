@@ -100,7 +100,20 @@ const ChatContainer = ({ selectedUser, setSelectUser }) => {
 
             {/* Input Box (Fixed Bottom) */}
             <div className='flex items-center p-3 border-t border-stone-500 gap-2 shrink-0'>
-                <button className='p-2 rounded-full bg-[#2a273c] hover:bg-[#3b3270]'>
+
+                {/* Hidden File Input */}
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                    onChange={(e) => console.log(e.target.files[0])}
+                />
+
+                {/* Gallery Button */}
+                <button
+                    onClick={() => document.getElementById("fileInput").click()}
+                    className='p-2 rounded-full bg-[#2a273c] hover:bg-[#3b3270]'
+                >
                     <img src={assets.gallery_icon} alt="gallery" className='w-6 h-6' />
                 </button>
 
@@ -113,6 +126,7 @@ const ChatContainer = ({ selectedUser, setSelectUser }) => {
                 <button className='p-2 rounded-full bg-[#3b32a0] hover:bg-[#4b3bd0]'>
                     <img src={assets.send_button} alt="send" className='w-6 h-6' />
                 </button>
+
             </div>
 
         </div>
