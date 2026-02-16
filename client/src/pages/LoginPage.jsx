@@ -1,25 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import assets from "../assets/assets";
+import { AuthContext } from "../../context/AuthContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [currentState, setCurrentState] = useState("Sign Up");
 
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [bio, setBio] = useState(''); 
+  const [bio, setBio] = useState('');
   const [password, setPassword] = useState('');
   const [isDataSubmitted, setIsDataSubmitted] = useState(false);
 
-  const onSubmitHandler = (event) => {
+  const { login } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
-    
+
+    // Step 1 (Sign Up): only move to Step 2, DO NOT call API
     if (currentState === "Sign Up" && !isDataSubmitted) {
-      // Move to Step 2 (Bio)
       setIsDataSubmitted(true);
-    } else {
-      // Final Submit (Login or Step 2 Finish)
-      console.log("Final Submission:", { fullName, bio, email, password });
+      return;
     }
+
+    // Step 2 (Sign Up) OR Login: now call API
+    const payload =
+      currentState === "Sign Up"
+        ? { fullName, email, password, bio }
+        : { email, password };
+
+    console.log("Final Submission:", payload);
+
+    await login(currentState === "Sign Up" ? "signup" : "login", payload);
   };
 
   return (
@@ -27,14 +41,14 @@ const LoginPage = () => {
       <div className="absolute inset-0 bg-[#12141e]/90"></div>
 
       <form onSubmit={onSubmitHandler} className="relative z-10 bg-white/5 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-white/10 w-full max-w-md mx-4">
-        
+
         {/* Back Button - Only shows on Step 2 of Sign Up */}
         {currentState === "Sign Up" && isDataSubmitted && (
-          <img 
-            src={assets.arrow_icon} 
-            alt="back" 
+          <img
+            src={assets.arrow_icon}
+            alt="back"
             onClick={() => setIsDataSubmitted(false)}
-            className="absolute top-10 left-8 w-4 cursor-pointer hover:scale-110 transition-transform rotate-180" 
+            className="absolute top-10 left-8 w-4 cursor-pointer hover:scale-110 transition-transform rotate-180"
           />
         )}
 
@@ -103,8 +117,8 @@ const LoginPage = () => {
           type="submit"
           className="w-full mt-6 bg-gradient-to-r from-[#077eff] to-[#a156ff] text-white py-3 rounded-xl font-medium shadow-lg hover:brightness-110 hover:scale-[1.02] transition-all active:scale-95"
         >
-          {currentState === "Login" 
-            ? "Login Now" 
+          {currentState === "Login"
+            ? "Login Now"
             : (isDataSubmitted ? "Create Account" : "Next Step")}
         </button>
 

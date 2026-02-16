@@ -5,7 +5,7 @@ import { getMessages, getUserForSidebar, markMessagesAsSeen, sendMessagesToSelec
 
 const messageRouter=express.Router();
 
-messageRouter.get('/user',protectRoute,getUserForSidebar);
+messageRouter.get('/users',protectRoute,getUserForSidebar);
 messageRouter.get('/:id',protectRoute,getMessages);
 
 
