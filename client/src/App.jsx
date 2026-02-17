@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 
-import bgImage from "./assets/img1.jpg";
+import bgImage from "/img1.jpg";
 import { AuthContext } from "../context/AuthContext";
 
 const App = () => {

@@ -51,6 +51,11 @@ app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
 
 
-server.listen(PORT, () => {
-  console.log("Server is running on port:", PORT);
-});
+
+if (process.env.NODE_ENV !== "production") {
+  server.listen(PORT, () => {
+    console.log("Server is running on port:", PORT);
+  });
+}
+
+export default server;
