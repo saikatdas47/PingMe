@@ -36,15 +36,20 @@ Watch demo 👉 https://youtu.be/Xb15C43Y4hU
 
 ## 📸 Screenshots
 
-<p align="center"><img width="1440" height="900" alt="Screenshot 2026-02-17 at 2 36 30 PM" src="https://github.com/user-attachments/assets/dcad1d79-fa2b-4a6a-8571-447448d7b1aa" />
-<img width="1440" height="900" alt="Screenshot 2026-02-17 at 2 35 54 PM" src="https://github.com/user-attachments/assets/d3a59115-ffd8-4dec-a589-8c7ec389727f" />
-<img width="1440" height="900" alt="Screenshot 2026-02-17 at 2 36 14 PM" src="https://github.com/user-attachments/assets/7517932e-40ef-4a46-9806-bfead2f718f5" />
-<img width="1440" height="900" alt="Screenshot 2026-02-17 at 2 36 21 PM" src="https://github.com/user-attachments/assets/c1d422c8-3db8-48cf-8e51-2077e3fca580" />
-![Uploading Screenshot 2026-02-17 at 2.36.30 PM.png…]()
-<img width="1440" height="900" alt="Screenshot 2026-02-17 at 2 36 41 PM" src="https://github.com/user-attachments/assets/39057292-973b-4118-ba0a-d3e01e4f46dd" />
-<img width="1440" height="900" alt="Screenshot 2026-02-17 at 2 36 46 PM" src="https://github.com/user-attachments/assets/e471138d-b0ef-4656-985b-c10aadc734e3" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dcad1d79-fa2b-4a6a-8571-447448d7b1aa" width="48%" />
+  <img src="https://github.com/user-attachments/assets/d3a59115-ffd8-4dec-a589-8c7ec389727f" width="48%" />
 </p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7517932e-40ef-4a46-9806-bfead2f718f5" width="48%" />
+  <img src="https://github.com/user-attachments/assets/c1d422c8-3db8-48cf-8e51-2077e3fca580" width="48%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/39057292-973b-4118-ba0a-d3e01e4f46dd" width="48%" />
+  <img src="https://github.com/user-attachments/assets/e471138d-b0ef-4656-985b-c10aadc734e3" width="48%" />
+</p>
 ---
 
 ## 📦 Installation
