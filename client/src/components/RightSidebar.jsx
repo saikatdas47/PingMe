@@ -109,11 +109,11 @@ const RightSidebar = () => {
       {/* ✅ Image Preview Modal (WHITE overlay + white card) */}
       {previewUrl && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#12141e]/90 backdrop-blur-sm p-4"
           onClick={() => setPreviewUrl(null)}
         >
           <div
-            className="relative max-w-[90vw] max-h-[85vh] rounded-2xl overflow-hidden bg-white shadow-2xl"
+            className="relative max-w-[80vw] max-h-[85vh] rounded-2xl overflow-hidden bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
